@@ -1,0 +1,18 @@
+package com.newcoming.greenhouse.service;
+
+import java.util.List;
+import java.util.Map;
+
+import com.newcoming.greenhouse.base.DaoSupport;
+import com.newcoming.greenhouse.domain.SensorData;
+
+public interface SensorDataService extends DaoSupport<SensorData> {
+	
+	//通过设备主键获取传感器的实时数据
+	public SensorData getRealtimeDataByEquipId(Long equipId);
+	
+	//通过设备编号和查询的天数获取传感器的历史数据
+	public List<SensorData> getAllHistorySensorData(String equipmentId,String date,Integer days) throws Exception;
+
+	public Map<Integer,Map<Integer,SensorData>> getAllHistorySensorData(String likeEquipmentId,String date,Long days) throws Exception;
+}

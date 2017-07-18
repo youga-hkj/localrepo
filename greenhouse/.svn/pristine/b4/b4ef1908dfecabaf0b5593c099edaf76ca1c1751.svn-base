@@ -1,0 +1,28 @@
+package com.newcoming.greenhouse.pojo;
+
+
+public class SensorDataForAndroid {
+	private Long id;  //自增主键
+	private Double value;		//设备记录值
+	public Long getId() {
+		return id; 
+	}
+	public void setId(Long id) {
+		this.id = id;
+	}
+	public Double getValue() {
+		return value;
+	}
+	public void setValue(Double value) {
+		this.value = value;
+	}
+	public SensorDataForAndroid(Long id, Double value) {
+		super();
+		this.id = id;
+		this.value = value;
+	}
+	public SensorDataForAndroid() {
+	}
+	
+	
+}
